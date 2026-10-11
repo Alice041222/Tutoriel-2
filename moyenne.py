@@ -22,11 +22,12 @@ def moyenne(valeurs):
 
     ---
     """
-    print("!! TODO : Compléter la fonction moyenne !!", end=" ")
-    pass
+    if len(valeurs)==0:
+        return 'ValueError'
+    else :
+        somme=0
+        for i in range(len(valeurs)):
+            somme+=valeurs[i]
+    return somme/len(valeurs)   
 
-
-if __name__ == "__main__":
-    Console().print(Markdown(moyenne.__doc__))
-    print("moyenne([10, 20, 15]) :", end=" ")
-    print(moyenne([10, 20, 15]))
+print(moyenne([10, 20, 15]))
